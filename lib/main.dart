@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import 'Options/options_de_base.dart';
 import 'Options/banniere_notifier_provider.dart';
 import 'pages_de_navigation.dart';
+import 'Pages/sous_pages/plats_des_restaurants.dart';
+import 'Pages/sous_pages/commande_par_drone.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +30,10 @@ class MyApp extends StatelessWidget {
         },
         child: SystemUI(),
       ),
-      routes: {},
+      routes: {
+        PlatsDesRestaurants.nomDeLaRoute: (_) => PlatsDesRestaurants(),
+        CommandeParDrone.nomDeLaRoute: (_) => CommandeParDrone(),
+      },
     );
   }
 }

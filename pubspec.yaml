@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  #provider: 4.3.2
+  provider: 4.3.2
+  shared_preferences: 0.5.12
   cupertino_icons: ^0.1.3
 
 dev_dependencies:
@@ -20,8 +21,21 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/rest1.jpg
+    - assets/rest2.jpg
+    - assets/rest3.jpg
+    - assets/rest4.jpg
+    - assets/rest5.jpg
+    - assets/rest6.jpg
+    - assets/plat1.jpg
+    - assets/plat2.jpg
+    - assets/plat3.jpg
+    - assets/plat4.jpg
+    - assets/plat5.jpg
+    - assets/plat6.jpg
+    - assets/plat7.jpg
+    - assets/plat8.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

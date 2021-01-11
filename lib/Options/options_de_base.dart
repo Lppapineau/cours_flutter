@@ -19,3 +19,8 @@ class OptionGrandeurTexte {
   static const double textSize20 = 18.0;
   static const double textSizeBanner = 22.0;
 }
+
+class OptionShader {
+  static const int shader50 = 150;
+  static const int shader100 = 100;
+}
