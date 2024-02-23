@@ -12,8 +12,10 @@ class FavorisPage extends StatefulWidget {
 }
 
 List<Widget> widgets = [];
-int nDuRestaurant;
-int nDuPlat;
+int nDuRestaurant = 0;
+
+int nDuPlat = 0;
+
 
 Future<void> sharedPref(
     nomDesRestaurants, definitionDesPlats, platsHauteur, imagesDesPlats) async {

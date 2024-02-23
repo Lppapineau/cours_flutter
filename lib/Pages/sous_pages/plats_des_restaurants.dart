@@ -10,13 +10,13 @@ class PlatsDesRestaurants extends StatefulWidget {
 }
 
 class _PlatsDesRestaurantsState extends State<PlatsDesRestaurants> {
-  List<bool> lesFavoris = [false, false, false];
+  List<bool?> lesFavoris = [false, false, false];
 
   Future<void> sharedPref(nomDuRestaurant, definitionDesPlats) async {
     final sharPref = await SharedPreferences.getInstance();
     for (var i = 0; i < 3; i++) {
       lesFavoris[i] =
-          sharPref.getBool(nomDuRestaurant + definitionDesPlats[i]["plat"]);
+          sharPref.getBool(nomDuRestaurant + definitionDesPlats[i]["plat"])!;
       if (lesFavoris[i] == null) {
         lesFavoris[i] = false;
       }
@@ -25,7 +25,8 @@ class _PlatsDesRestaurantsState extends State<PlatsDesRestaurants> {
 
   @override
   Widget build(BuildContext context) {
-    List<dynamic> arguments = ModalRoute.of(context).settings.arguments;
+    List<dynamic> arguments =
+        ModalRoute.of(context)?.settings.arguments as List<dynamic>;
     String imageAssets = arguments[0];
     String nomDuRestaurant = arguments[1];
     List<String> imagesDesPlats = arguments[2];
@@ -42,7 +43,7 @@ class _PlatsDesRestaurantsState extends State<PlatsDesRestaurants> {
           return snapshot.connectionState == ConnectionState.waiting
               ? Center(child: CircularProgressIndicator())
               : PlatsDesRestaurantsWidget(imageAssets, nomDuRestaurant,
-                  imagesDesPlats, definitionDesPlats, lesFavoris);
+                  imagesDesPlats, definitionDesPlats, lesFavoris.cast<bool>());
         },
       ),
     );

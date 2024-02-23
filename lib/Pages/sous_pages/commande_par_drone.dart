@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../Options/options_de_base.dart';
-import '../menu.dart';
 
 class CommandeParDrone extends StatefulWidget {
   static const nomDeLaRoute = "/commande_par_drone";
@@ -12,7 +11,7 @@ class CommandeParDrone extends StatefulWidget {
 class _CommandeParDroneState extends State<CommandeParDrone> {
   @override
   Widget build(BuildContext context) {
-    List<dynamic> arguments = ModalRoute.of(context).settings.arguments;
+    List<dynamic> arguments = ModalRoute.of(context)?.settings.arguments as List<dynamic>;
     double platsHauteur = arguments[0];
     String imageDuPlat = arguments[1];
     Map<String, dynamic> definitionDuPlat = arguments[2];

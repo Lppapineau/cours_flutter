@@ -7,7 +7,7 @@ class PointsWidget extends StatefulWidget {
   final List<Map<String, dynamic>> restaurantsBanniere;
 
   PointsWidget(
-      {@required this.pageBanniere, @required this.restaurantsBanniere});
+      {required this.pageBanniere, required this.restaurantsBanniere});
 
   @override
   _PointsWidgetState createState() => _PointsWidgetState();
