@@ -13,11 +13,11 @@ class ListeDesRestaurants extends StatefulWidget {
   final List<String> imagesDesRestaurants;
 
   ListeDesRestaurants({
-    @required this.restaurantType,
-    @required this.banniereHauteur,
-    @required this.restaurantsLargeur,
-    @required this.nomDesRestaurants,
-    @required this.imagesDesRestaurants,
+    required this.restaurantType,
+    required this.banniereHauteur,
+    required this.restaurantsLargeur,
+    required this.nomDesRestaurants,
+    required this.imagesDesRestaurants,
   });
 
   @override

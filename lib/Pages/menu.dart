@@ -16,7 +16,8 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  int bannierePage;
+  int bannierePage = 0;
+
   List<Map<String, dynamic>> restaurantsBannieres =
       RestaurantsBannieres.restaurantsBannieres;
   List<String> restaurantsTypes = RestaurantsTypes.restaurantsTypes;

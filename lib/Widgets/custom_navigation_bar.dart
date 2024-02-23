@@ -5,7 +5,7 @@ import '../Options/options_de_base.dart';
 class CustomNavigationBar extends StatefulWidget {
   final List<String> nomDesPages;
   final Function(int valeur) function;
-  CustomNavigationBar({@required this.nomDesPages, @required this.function});
+  CustomNavigationBar({required this.nomDesPages, required this.function});
   @override
   _CustomNavigationBarState createState() => _CustomNavigationBarState();
 }
@@ -25,11 +25,11 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.view_list),
-          title: Text(widget.nomDesPages[0]),
+          label: widget.nomDesPages[0],
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),
-          title: Text(widget.nomDesPages[1]),
+          label: widget.nomDesPages[1],
         ),
         // BottomNavigationBarItem(
         //   icon: Icon(Icons.functions),
